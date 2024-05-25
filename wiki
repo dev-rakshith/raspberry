@@ -1,3 +1,39 @@
+--Auto start-up chrome:
+vi /home/zer0/start-chrome.sh
+#!/bin/bash
+# Wait for the desktop environment to fully load
+sleep 10  # Adjust time as needed
+# Start Google Chrome
+chromium-browser  # If you have Chrome, replace 'chromium-browser' with 'google-chrome'
+
+chmod +x /home/pi/start-chrome.sh
+
+sudo nano /etc/systemd/system/chrome-startup.service
+[Unit]
+Description=Start Chrome on Boot
+Wants=graphical.target
+After=graphical.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/home/pi/start-chrome.sh
+Restart=on-failure
+
+[Install]
+WantedBy=graphical.target
+
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable chrome-startup.service
+
+sudo systemctl start chrome-startup.service
+
+sudo systemctl status chrome-startup.service
+
+
+--Initiate git
 sudo apt update
 sudp apt install git
 --create a new repository on the command line
