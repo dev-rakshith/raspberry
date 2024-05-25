@@ -18,3 +18,6 @@ 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
 
 git remote set-url origin https://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"github.com/dev-rakshith/raspberry.git
 git push origin main
+In case of token scanned error, allow secret here:
+https://github.com/dev-rakshith/raspberry/security/secret-scanning/unblock-secret/2gwx5E8G5uDfEYX3xS8WFhDckmC
+
