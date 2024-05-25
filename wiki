@@ -1,5 +1,5 @@
 sudo apt update
-
+sudp apt install git
 --create a new repository on the command line
 git init
 git add README.md
@@ -11,4 +11,10 @@ git push -u origin main
 --push an existing repository from the command line
 git remote add origin https://github.com/dev-rakshith/raspberry.git
 git branch -M main
-git push -u origin main
+--git push -u origin main(not working since 2021)
+user profile -> settings -> developer settings -> personal access tokens -> Fine-grained tokens
+Tokens(classic) -> Generate new personal access token ->  note, duration, select all, generate token
+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
+
+git remote set-url origin https://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"github.com/dev-rakshith/raspberry.git
+git push origin main
