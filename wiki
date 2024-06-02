@@ -1,6 +1,20 @@
+--RVNC
+Install RVNC on moble
+Authenticate VNC server on desktop
+sudo raspi-config
+Interface options
+Enable VNC server
+
+--IR camera
+How to switch between non-night vision and night vision mode: 
+(Non-night vision is standard mode)
+1. Run the instruction: sudo nano /boot/config.txt
+2. Add disable_camera_LED = 1
+
 --Camera
 sudo apt install libcamera-apps
 libcamera-still -t 0
+https://www.waveshare.com/wiki/RPi_IR-CUT_Camera
 
 --Auto start-up chrome:
 Create an Autostart Entry:
