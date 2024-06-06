@@ -1,3 +1,15 @@
+--Pico check
+import machine
+import utime
+
+onboard_led = machine.Pin(25, machine.Pin.OUT)
+
+while True:
+    onboard_led.value(1)
+    utime.sleep(2)
+    onboard_led.value(0)
+    utime.sleep(2)
+    
 --RVNC
 Install RVNC on moble
 Authenticate VNC server on desktop
@@ -48,9 +60,9 @@ git branch -M main
 --git push -u origin main(not working since 2021)
 user profile -> settings -> developer settings -> personal access tokens -> Fine-grained tokens
 Tokens(classic) -> Generate new personal access token ->  note, duration, select all, generate token
-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
+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
 
-git remote set-url origin https://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@github.com/dev-rakshith/raspberry.git
+git remote set-url origin https://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@github.com/dev-rakshith/raspberry.git
 git push origin main
 In case of token scanned error, allow secret here:
 https://github.com/dev-rakshith/raspberry/security/secret-scanning/
